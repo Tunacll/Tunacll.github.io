@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PetBilir</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/Main2.css">
+    <link rel="stylesheet" href="Scripts/jquery-3.6.0.min.js" type="text/css">
+    
+</head>
+
+<body>
+    <div>
+        <div class>
+            <a><img src="Images/P_petbilir2-01.png" id="logo" style="width: 200px; float: right;"></a>
+            <a href="#" class="w3-bar-item w3-button">HomePage</a>
+            <a href="Log.html" class="w3-bar-item w3-button">Login</a>
+            <a href="Randevu.html" class="w3-bar-item w3-button">Make an Appointment</a>
+
+        </div>
+
+        <div class="mainDiv">
+            <form class="form">
+                <select id="type">
+                    <option value="type">Type of Animal</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Snake">Snake</option>
+                </select> <br>
+
+                <input type="text" id="country" placeholder="Location You Are Looking For"> <br>
+
+                <select id="acil">
+                    <option value="acil">Home vet?</option>
+                    <option value=" ">Yes</option>
+                    <option value="not">No</option>
+                </select> <br>
+                <input type="submit" value="Ara" id="btnara" style="background-color: grey;" onclick="clickk()">
+                <br>
+
+            </form>
+        </div>
+        <div id="info"></div>
+
+        <header id="myHeader">
+
+            <div class="w3-center">
+
+                <h1 class="w3-xxxlarge w3-animate-bottom" style="margin-bottom: 100px;"></h1>
+                <div class="w3-padding-32">
+                    <button class="w3-btn w3-xlarge w3-theme-dark w3-hover-teal" style="font-weight:900; ">Our
+                        Services</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+
+
+    <div class="w3-row-padding w3-center w3-margin-top" style="margin-left: 350px;">
+        <!--Margin 0 auto işlemiyor-->
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <h3 style="color: white">Clinics</h3><br>
+                <a href="Clinics.html"><img src="Images/clinic2.png" style="width: 150px;"></a>
+                <p>Find out about expert</p>
+                <p>clinics and reliable veterinarians</p>
+                <p>n the fastest way!</p>
+
+            </div>
+        </div>
+
+
+
+        <div class="w3-third">
+            <div class="w3-card w3-container" style="min-height:460px">
+                <h3>Bone Finding Game</h3><br>
+                <a href="Oyun.html"><img src="Images/bonegame2.png" style="width: 170px;"></a>
+                <p>A fun game</p>
+                <p>so you don't get bored</p>
+                <p>while browsing our site!</p>
+
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    function clickk() {//external olarak defalarca denedim ama algılamadı
+           
+           type = document.querySelector('#type').value;
+           country = document.querySelector('#country').value;
+           homevet = document.querySelector('#acil').value;
+       
+           infos = "Veteriner's are filtered by your option:Your pet is " + type + "\nYou are living in " + country + " \nYou are " + homevet + " wanting home-vet service";
+           
+           
+           document.getElementById('info').outerHTML = infos;
+       }
+</script>
+
+
+
+    
+
+</body>
+
+</html>
